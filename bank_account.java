@@ -19,6 +19,7 @@ public class bank_account {
         Ac.balance= 500;
         Ac.deposit(1000);
         Ac.PrintInfo();
+        
     }
     
 }
