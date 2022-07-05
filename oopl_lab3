@@ -1,0 +1,43 @@
+class A{
+   void disPlay(){
+        System.out.println("Hello OOP !");
+    }
+    void Add(){
+        int a =5,b =6;
+        System.out.println(a+b);
+    }
+    A(int x , int y){
+        System.out.println("This is inside  the constructor.");
+        System.out.println(x-y);
+    }
+}
+
+class ABC{
+    int x,y,z;
+    int add (){
+        int total = x+y+z;
+        return total;
+    }
+    ABC(int x,int y, int z){
+        System.out.println("This is ABC class constructor.");
+        this.x =x;
+        this.x =y;
+        this.z =z;
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	   //	System.out.println("Hello Java !");
+// 		A obj_A = new A(200,101);// 1st object 
+// 		obj_A.disPlay();
+// 		obj_A.Add();
+		
+// 		A  obj_A2 = new A(50,30); // 2nd object 
+// 		obj_A2.disPlay();
+// 		obj_A2.Add();
+        ABC abc = new ABC(10,20,30);
+        System.out.println("total = "+abc.add());
+	}
+}
