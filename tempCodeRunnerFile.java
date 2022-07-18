@@ -1,4 +1,5 @@
-            // if(i ==2){
-            //     System.out.println(1); 
-
-            //   } 
+    void print_Information(){
+        
+        System.out.println("id ="+ id);
+        System.out.println("dep ="+dep);
+    }
