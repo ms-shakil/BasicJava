@@ -14,6 +14,9 @@ class Person{
     void prac(){
         System.out.println("Hello shakil");
     }
+    void printPersonInformation(){
+        System.out.println("This is Person class Information.");
+    }
 }
 
 class Student extends Person{
@@ -28,13 +31,31 @@ class Student extends Person{
         System.out.println("id ="+ super.id);
         System.out.println("dep ="+dep);
     }
+    void printStudentInformation(){
+        System.out.println("This is Student class information Fun.");
+    }
 
+}
+
+class NonStudent extends Student{
+    NonStudent(){
+        System.out.println("This is Non Studnt class Constructor");
+    }
+    void print_Information(){
+        System.out.println("There are No Data.");
+        super.printPersonInformation();
+    }
+    void printNonStudentInformation(){
+        System.out.println("This is NonStudent class INformation.");
+    }
 }
 public class Inheritance {
     public static void main(String[] args) {
-        Student S = new Student();
-        S.prac();
+        NonStudent S = new NonStudent();
         S.print_Information();
-        System.out.println(S.id);
+        S.printPersonInformation();
+        S.printNonStudentInformation();
+        Student S2 = new Student();
+        S2.print_Information();
     }
 }
