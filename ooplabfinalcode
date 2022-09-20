@@ -1,0 +1,37 @@
+import  javax.swing.*;
+import java.io.*;
+import java.util.Scanner;
+public class GUI {
+    public static void main(String[] args) {
+        try{
+            int i=0;
+            String name = JOptionPane.showInputDialog("Enter player name:");
+            File file= new File("info.txt");
+            Scanner Scr = new Scanner(file);
+            while (Scr.hasNext()){
+                int match = Scr.nextInt();
+                String nam = Scr.next();
+                String country = Scr.next();
+                int run = Scr.nextInt();
+                int wic = Scr.nextInt();
+                int  tr = name.compareTo(nam);
+
+                if(tr ==0){
+
+                 JOptionPane.showMessageDialog(null,"Name:"+nam+"\n"+"country:"+country+"\n"+"Country:"+country
+                  +"\n"+"Runs:"+run+"\n"+"Wicket:"+wic+"\n");
+                }
+                i=1;
+
+            }
+            if(i ==0){
+                JOptionPane.showMessageDialog(null,"Data not found.");
+            }
+
+        }catch (Exception e){
+            System.out.println(e);
+
+        }
+    }
+
+}
